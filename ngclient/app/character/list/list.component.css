@@ -1,0 +1,10 @@
+div.characters {
+    background-color: #e1e1e1;
+    padding: 5px 10px  ;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+div.characters li {
+    list-style: none;
+}

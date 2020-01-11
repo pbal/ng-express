@@ -1,0 +1,16 @@
+<h4>List</h4>
+
+<div class="characters" *ngFor="let item of list" (click)="onClick(item)">
+  <h5>{{ item.Name }}</h5>
+  <ul>
+    <li>
+      Gender: {{ item.Gender }}
+    </li>
+    <li>
+      Cuture: {{ item.Culture }}
+    </li>
+    <li>
+      Born: {{ item.Born }}
+    </li>
+  </ul>
+</div>

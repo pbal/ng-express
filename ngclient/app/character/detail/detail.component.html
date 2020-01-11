@@ -1,0 +1,21 @@
+<h4>Details</h4>
+<form (ngSubmit)="onSubmit(detail)" #detail="ngForm">
+    <div class="form-group">
+        <label required=true for="name">Name</label>
+        <input class="form-control" [(ngModel)]="character.Name" type="text" name="name" data-validate="required"
+            required />
+    </div>
+    <div class="form-group">
+        <label for="culture">Culture</label>
+        <input class="form-control" [(ngModel)]="character.Culture" type="text" name="culture" />
+    </div>
+    <div class="form-group">
+        <label for="born">Born</label>
+        <input class="form-control" [(ngModel)]="character.Born" type="text" name="born" />
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <input class="form-control" [(ngModel)]="character.Gender" type="text" name="gender" />
+    </div>
+    <button isSubmit="true" class="btn btn-primary" [disabled]="!detail.form.valid">Submit</button>
+</form>

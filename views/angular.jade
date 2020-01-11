@@ -1,0 +1,14 @@
+extends shared/layout
+
+block bodyscript
+  script(src="runtime-es2015.js", type="module")
+  script(src="polyfills-es2015.js", type="module")
+  script(src="vendor-es2015.js", type="module")
+  script(src="main-es2015.js", type="module")
+
+block content
+
+  div.d-flex.justify-content-between.flex-wrap.flex-md-nowrap.align-items-center.pt-3.pb-2.mb-3.border-bottom
+    h1.h2=title
+
+  app-root Loading...

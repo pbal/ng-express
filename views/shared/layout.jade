@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
+    link(rel='stylesheet', href='/assets/style.css')
+
+    title= title
+    base(href="/")
+    block head
+
+  body
+    include banner
+
+    div.container-fluid
+      div.row
+        nav.col-md-2.d-none.d-md-block.bg-light.sidebar
+          div.sidebar-sticky
+            ul.nav.flex-column
+              - var activeLink = 'active nav-link'
+              - var inActiveLink = 'nav-link'
+
+              li.nav-item
+                a(href="/home").nav-link Home
+              li.nav-item
+                a(href="/angular").nav-link Angular
+
+        main(role='main').col-md-9.ml-sm-auto.col-lg-10.px-4
+          div.container
+            block content
+
+    block bodyscript
+
